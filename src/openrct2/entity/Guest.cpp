@@ -225,6 +225,7 @@ static constexpr const char *gPeepEasterEggNames[] = {
     "EILIDH BELL",
     "NANCY STILLWAGON",
     "DAVID ELLIS",
+    "VANESSA PLATEVOET"
 };
 // clang-format on
 
@@ -607,6 +608,12 @@ void Guest::HandleEasterEggName()
 
     PeepFlags &= ~PEEP_FLAGS_PHOTO;
     if (CheckEasterEggName(EASTEREGG_PEEP_NAME_CHRIS_SAWYER))
+    {
+        PeepFlags |= PEEP_FLAGS_PHOTO;
+    }
+
+    PeepFlags &= ~PEEP_FLAGS_PHOTO;
+    if (CheckEasterEggName(EASTEREGG_PEEP_NAME_VANESSA_PLATEVOET))
     {
         PeepFlags |= PEEP_FLAGS_PHOTO;
     }
